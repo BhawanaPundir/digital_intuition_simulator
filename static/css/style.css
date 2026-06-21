@@ -1,0 +1,9 @@
+/* Minimal stylesheet to avoid 404 and provide basic layout */
+body { font-family: Arial, sans-serif; background:#f7f7f7; color:#222; margin:0; padding:20px; }
+.container { max-width:900px; margin:0 auto; background:#fff; padding:20px; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.06);} 
+header { display:flex; align-items:center; gap:12px; }
+.back-btn { text-decoration:none; color:#007bff; }
+.btn { background:#007bff; color:#fff; border:none; padding:8px 12px; border-radius:6px; cursor:pointer; }
+.red-flags { background:#fff0f0; border-left:4px solid #ff4d4f; padding:8px; margin:8px 0; }
+.options button { display:block; margin:8px 0; width:100%; text-align:left; }
+.progress { margin-top:12px; }

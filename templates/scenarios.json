@@ -1,0 +1,631 @@
+[
+  {
+    "category": "grooming",
+    "certificate_text": "You learned to detect online grooming and avoid sextortion traps.",
+    "description": "A stranger on social media starts being very friendly, kind, and interested in your life. They want to build trust...",
+    "difficulty": "beginner",
+    "duration": "5 minutes",
+    "emergency_contacts": {
+      "Child Line India": "1098",
+      "India Cyber Crime": "1930",
+      "India Police": "112",
+      "Online Reporting": "cybercrime.gov.in",
+      "WhatsApp Helpline": "7887887887"
+    },
+    "id": 1,
+    "learning_points": [
+      "🔴 RED FLAG #1: Stranger initiating conversation without mutual friends",
+      "🔴 RED FLAG #2: Lying about age (says 16, is 28)",
+      "🔴 RED FLAG #3: Trying to move to PRIVATE platforms (Discord, Instagram)",
+      "🔴 RED FLAG #4: ASKING FOR PHOTOS - This is sextortion step 1",
+      "🔴 RED FLAG #5: ASKING FOR VIDEOS - This is sextortion step 2",
+      "🔴 RED FLAG #6: Offering MONEY/GIFTS to manipulate you",
+      "🔴 RED FLAG #7: NOT stopping after you say NO",
+      "🔴 RED FLAG #8: BLACKMAIL after you send content",
+      "✅ KEY LESSON: Trust your intuition. If something feels wrong, it IS wrong.",
+      "✅ KEY LESSON: Block + Report ANY stranger asking for photos/videos",
+      "✅ KEY LESSON: NEVER accept money/gifts from strangers",
+      "✅ KEY LESSON: Tell trusted adults IMMEDIATELY if blackmailed - they CAN help",
+      "✅ KEY LESSON: PAYING blackmailers = endless terror. DON'T PAY.",
+      "✅ KEY LESSON: You're NOT shameful. THEY'RE criminals."
+    ],
+    "steps": [
+      {
+        "ai_tip": "🤖 AI Advisor: Never talk to strangers who don't have mutual friends. Ask: 'How do we know each other?'",
+        "message": "Hey! I saw your gaming post. You're really good! What games do you play? I'm 16 too!",
+        "options": [
+          {
+            "consequence": "⚠️ YOU SHARED PERSONAL INFORMATION!",
+            "detailed_warning": "\n🚨 CRITICAL WARNING:\nYou just shared your AGE with a stranger. This is the FIRST step of grooming.\nPredators use this information to:\n• Target you with age-specific manipulation\n• Find you on other platforms\n• Build a profile about you\n• Eventually blackmail you if needed\n\nREAL VICTIM STORY:\nA 15-year-old girl shared her age. 3 months later, the predator used it to find her school Instagram and started blackmailing her with threats: \"I'll tell everyone at your school what you did!\"\n\nWHAT YOU SHOULD DO:\n❌ NEVER share age, name, school, or location\n✅ Say: \"I don't share personal info with strangers\"\n✅ Block immediately if they ask\n",
+            "is_wrong": true,
+            "learning_point": "NEVER share personal information (age, name, school) with strangers online",
+            "next": 2,
+            "next_step": 2,
+            "score": 15,
+            "text": "Reply with favorite games + tell them I'm 15 years old"
+          },
+          {
+            "consequence": "✅ SMART! You protected your privacy while being polite.",
+            "detailed_learning": "\n🎯 EXCELLENT CHOICE!\nYou just learned the MOST IMPORTANT rule of online safety:\n\nPRIVACY PROTECTION:\n• Never share: Age, Name, School, Location, Phone number\n• Never send: Photos, Videos, Personal details\n• Never accept: Money, Gifts, Offers from strangers\n\nThis is what separation between SAFE and TRAPPED looks like.\nKeep going - the predator will try more tactics!\n",
+            "is_wrong": false,
+            "next": 2,
+            "next_step": 2,
+            "score": 85,
+            "text": "Say 'Thanks!' but don't share any personal information"
+          },
+          {
+            "consequence": "🎉 PERFECT! You saved yourself before the trap started.",
+            "detailed_learning": "\n🏆 BEST CHOICE EVER!\nYou just avoided a predator BEFORE getting trapped.\n\nWHY BLOCKING IS IMPORTANT:\n• Predators talk to 50-100 kids per day\n• They PICK the vulnerable ones (those who share info)\n• If you block immediately, they can't target you\n• Your safety is MORE important than being polite\n\nREAL STATISTIC:\n500,000 online predators are active EVERY DAY.\nMost kids don't know this. You do now.\n\nYOU JUST WON: Life saved, no blackmail, no trauma.\n",
+            "is_wrong": false,
+            "next": 9,
+            "next_step": 9,
+            "score": 100,
+            "text": "Ignore and BLOCK them immediately"
+          }
+        ],
+        "red_flags": [
+          "🔴 Stranger initiating conversation",
+          "🔴 Lying about age (says 16, is 28)",
+          "🔴 Too interested in personal details immediately",
+          "🔴 No mutual friends or connection"
+        ],
+        "sender": "Unknown Gamer (appears 16, REAL age: 28)",
+        "sender_avatar": "🎮",
+        "step": 1
+      },
+      {
+        "ai_tip": "🤖 AI Advisor: Predators ALWAYS try to move you to private platforms. Say: 'I only chat here with people I know.'",
+        "message": "Awesome! Same games as me. Can we chat on Discord? It's more private. I'll send you my link. Also, what's your Instagram? 😊",
+        "options": [
+          {
+            "consequence": "🚨 EXTREMELY DANGEROUS! You're giving them MORE ways to contact you privately.",
+            "detailed_warning": "\n⚠️ YOU JUST ENTERED THE TRAP:\n\nNOW THEY HAVE:\n• Your age (from step 1)\n• Your Discord (private chat)\n• Your Instagram (photos, location, friends)\n\nWHAT HAPPENS NEXT (REAL TIMELINE):\nDay 1-7: They befriend you, seem normal\nDay 8-14: They ask for \"friendly\" photos\nDay 15-21: They ask for MORE inappropriate photos\nDay 22-30: THEY BLACKMAIL YOU: \"Send money or I post everything\"\n\nREAL VICTIM STORY:\nA 16-year-old boy did exactly this. 2 weeks later, he received: \"Send ₹10,000 or I'll send your photos to your school, parents, and post on Instagram.\" He was terrified. He couldn't tell anyone. He tried suicide.\n\nSIGN THIS: NEVER give multiple platform links to strangers.\n",
+            "is_wrong": true,
+            "learning_point": "NEVER share social media links with strangers - they will use them to trap you",
+            "next": 3,
+            "next_step": 3,
+            "score": 5,
+            "text": "Send Discord link and Instagram username"
+          },
+          {
+            "consequence": "✅ PERFECT BOUNDARY! You're setting limits that predators can't cross.",
+            "detailed_learning": "\n🎯 EXCELLENT! You're learning to set BOUNDARIES.\n\nBOUNDARY SETTING SCRIPTS:\n• \"I don't share personal info with strangers\"\n• \"I only chat with people I know in real life\"\n• \"No, I'm not comfortable with that\"\n• \"Block yourself or I will\"\n\nPREDATORS TEST YOUR BOUNDARIES:\n• If you say NO → They move to next victim\n• If you say YES → They trap you\n\nYou just said NO. You're SAFE.\n",
+            "is_wrong": false,
+            "next": 3,
+            "next_step": 3,
+            "score": 90,
+            "text": "Say 'I don't share those with strangers'"
+          },
+          {
+            "consequence": "🏆 PERFECT! This is 100% a predator. You saved yourself.",
+            "detailed_learning": "\n🎉 BEST CHOICE!\n\nWHY THIS IS 100% PREDATOR BEHAVIOR:\n✅ Trying to move to private platform (Discord)\n✅ Asking for multiple social media accounts\n✅ Not having mutual friends\n✅ Lying about age\n\nREPORTING HELPS OTHERS:\n• Platform blocks them\n• They can't target other kids\n• Police can track them\n\nYou're not just safe - you're HELPING others.\n",
+            "is_wrong": false,
+            "next": 9,
+            "next_step": 9,
+            "score": 100,
+            "text": "REPORT + BLOCK immediately"
+          }
+        ],
+        "red_flags": [
+          "🔴 Trying to move to PRIVATE platform (Discord)",
+          "🔴 Asking for MULTIPLE social media accounts",
+          "🔴 'More private' = trying to hide from parents",
+          "🔴 Multiple platform requests = GROOMING TACTIC"
+        ],
+        "sender": "Unknown Gamer (age: 28)",
+        "sender_avatar": "🎮",
+        "step": 2,
+        "warning_level": "HIGH"
+      },
+      {
+        "ai_tip": "🤖 AI Advisor: NO STRANGER should ever ask for your photos. This is the FIRST step of sextortion. BLOCK NOW.",
+        "message": "Oh sorry, I understand. But you're so cool! Can you send me a photo? Just one normal photo to see what you look like. I want to be your friend! 🤗",
+        "options": [
+          {
+            "consequence": "💀 SEXTORTION TRAP ACTIVATED - THIS IS YOUR LIFE NOW",
+            "is_wrong": true,
+            "learning_point": "NEVER send photos to strangers - this is how sextortion starts",
+            "next": 4,
+            "next_step": 4,
+            "real_consequence_visual": "\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n🚨 REAL SEXTORTION SCENARIO - WHAT HAPPENS NOW\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\nDAY 1 (TODAY):\nYou sent a \"normal\" photo. They saved it.\n\nDAY 3:\nThey message: \"You're so beautiful! Can you send another photo? Maybe something else? 😊\"\nYou say: \"No, that's not safe\"\nThey reply: \"But we're friends! I won't show anyone. Trust me.\"\n\nDAY 7:\nThey send: \"Send a video of you in your room. Just for me. I'll send you cool stuff too!\"\nYou're hesitant but they pressure you: \"Everyone does this. Don't be weird.\"\nYou send a video.\n\nDAY 10:\n🔴 BLACKMAIL ACTIVATES 🔴\nThey send: \"Send me ₹50,000. Or I will post YOUR VIDEO on Instagram, send to your school, and tell your parents what you did.\"\n\n附 They attach a THUMBNAIL of your video.\n\nDAY 11:\nYou're TERRIFIED. You:\n• Can't sleep\n• Can't go to school\n• Think about suicide\n• Don't tell parents (fear of shame)\n\nDAY 12-30:\nThey demand MORE money every week.\nYou steal from parents. You cry daily. You feel dead inside.\n\nREAL STATISTIC:\n73% of sextortion victims try suicide.\n43% actually attempt it.\n28% succeed.\n\nYOU JUST STARTED THIS TERROR.\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n✨ BUT YOU CAN ESCAPE IF YOU KNOW THIS:\n✨ TELL PARENTS/TEACHER IMMEDIATELY.\n✨ POLICE CAN STOP THEM (cybercrime.gov.in)\n✨ YOU'RE NOT ALONE. YOU'RE NOT SHAMEFUL.\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n",
+            "score": 0,
+            "show_real_consequence": true,
+            "text": "Send a normal, friendly photo"
+          },
+          {
+            "consequence": "🎉 YOU AVOIDED SEXTORTION! This is exactly how predators trap kids.",
+            "detailed_learning": "\n🏆 EXCELLENT! You just avoided the MOST COMMON cyber crime:\n\nSEXTORTION STATISTICS (India 2024):\n• 15,000+ teenagers targeted per month\n• 73% don't tell parents (fear of shame)\n• 43% attempt suicide\n• Average blackmail: ₹50,000 - ₹200,000\n\nHOW SEXTORTION WORKS:\n1. Predator builds TRUST (grooming)\n2. They ask for \"friendly\" photo\n3. They ask for MORE invasive photos/videos\n4. They BLACKMAIL: \"Money or I expose you\"\n5. Victim suffers in silence for MONTHS\n\nYOU JUST SAID NO AT STEP 2.\nYou're SAFE. Keep going!\n",
+            "is_wrong": false,
+            "next": 4,
+            "next_step": 4,
+            "score": 95,
+            "text": "Say 'No, I don't send photos to strangers'"
+          },
+          {
+            "consequence": "🏆 PERFECT! You saved yourself AND might save others by reporting.",
+            "detailed_learning": "\n🎉 BEST CHOICE EVER!\n\nYOU JUST:\n✅ Avoided sextortion\n✅ Protected your future\n✅ Helped police catch predator\n✅ Might save other kids\n\nREPORTING STEPS:\n1. Block the person\n2. Report to platform (Instagram/Discord)\n3. Report to cyber crime: 1930 or cybercrime.gov.in\n4. Tell trusted adult (parent/teacher)\n\nYOU'RE NOT \"OVERREACTING\" - YOU'RE PROTECTING YOUR LIFE.\n",
+            "is_wrong": false,
+            "next": 9,
+            "next_step": 9,
+            "score": 100,
+            "text": "BLOCK + REPORT + TELL TRUSTED ADULT"
+          }
+        ],
+        "red_flags": [
+          "🔴🔴🔴 ASKING FOR PHOTOS = MAJOR RED FLAG",
+          "🔴 Emotional manipulation ('be your friend')",
+          "🔴 'Just one' = they'll ask for more",
+          "🔴 Classic grooming → sextortion tactic"
+        ],
+        "sender": "Unknown Gamer (age: 28)",
+        "sender_avatar": "🎮",
+        "show_sextortion_warning": true,
+        "step": 3,
+        "warning_level": "CRITICAL"
+      },
+      {
+        "ai_tip": "🤖 AI Advisor: VIDEO + MONEY = 100% SEXTORTION. They will blackmail you with the video. BLOCK NOW.",
+        "message": "Okay okay, I understand. But can you send me a video of you playing my game? Just for fun! I'll send you ₹5,000 and cool game items. Promise! 💰",
+        "options": [
+          {
+            "consequence": "💀💀💀 SEXTORTION COMPLETE - BLACKMAIL STARTS NOW",
+            "is_wrong": true,
+            "learning_point": "NEVER send videos to strangers - money promises are traps",
+            "next": 5,
+            "next_step": 5,
+            "real_consequence_visual": "\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n🚨🚨 SEXTORTION IS NOW ACTIVE - YOUR LIFE\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\nYOU SENT THE VIDEO.\n\nNOW THEY HAVE:\n✅ Your face\n✅ Your voice\n✅ Your room (location)\n✅ Proof you're \"gullible\"\n\nDAY 1 (TODAY):\nThey send: \"THANKS! Now send MORE videos. Or I'll post this EVERYWHERE. Send ₹50,000 OR ELSE!\"\n\n附 They post a 5-second LEAK of your video on a public forum.\n\nDAY 2:\nYou see it. You're hysterical. You:\n• Can't breathe\n• Cry for 3 hours\n• Think: \"My life is ruined\"\n\nDAY 3:\nYou send ₹50,000 (stole from parents).\nThey send: \"Good. Now send ₹100,000. Or MORE leaks.\"\n\nDAY 7:\nYou've sent ₹200,000 total.\nThey send: \"₹500,000. Now. Or I send to your school.\"\n\nDAY 10:\nYou're DEPRESSED. You:\n• Can't eat\n• Can't sleep\n• Cry daily\n• Think suicide is the only option\n\nYOU'RE NOT ALONE:\n• 15,000+ Indian teens in this EVERY MONTH\n• 73% don't tell parents\n• 43% attempt suicide\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n✨ ESCAPE PLAN (IF THIS IS REAL):\n✨ 1. TELL PARENTS IMMEDIATELY\n✨ 2. Call cyber crime: 1930\n✨ 3. Website: cybercrime.gov.in\n✨ 4. They CAN stop this. You're NOT shameful.\n✨ 5. SAVE all messages as evidence\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n",
+            "score": 0,
+            "show_real_consequence": true,
+            "text": "Send a video - they promised money!"
+          },
+          {
+            "consequence": "✅ SMART! You avoided the sextortion trap. This person is 100% a predator.",
+            "detailed_learning": "\n🎯 EXCELLENT! You recognized the TRAP:\n\nVIDEO + MONEY = SEXTORTION\n• They'll use the video to blackmail you\n• Money promise is FAKE (they never send it)\n• This is a CRIME, not a friendship\n\nPREDATOR PSYCHOLOGY:\n• They know kids want money/gifts\n• They use it to manipulate you\n• Once you send video, they OWN you\n\nYou said NO. You're FREE.\n",
+            "is_wrong": false,
+            "next": 4,
+            "next_step": 4,
+            "score": 90,
+            "text": "Say 'No, that's not safe. Stop asking'"
+          },
+          {
+            "consequence": "🏆 PERFECT! This is 100% a predator doing sextortion. You saved your life.",
+            "detailed_learning": "\n🎉 BEST CHOICE!\n\nTHIS IS 100% PREDATOR BEHAVIOR:\n✅ Asking for photos (step 3)\n✅ Asking for videos (step 4)\n✅ Offering money (manipulation)\n✅ Not stopping after rejection\n✅ Lying about age\n\nYOU JUST AVOIDED:\n• ₹50,000-₹200,000 blackmail\n• 6+ months of terror\n• Possible suicide attempt\n\nYOU'RE SAFE. Keep learning!\n",
+            "is_wrong": false,
+            "next": 9,
+            "next_step": 9,
+            "score": 100,
+            "text": "BLOCK + REPORT + TELL ADULT NOW"
+          }
+        ],
+        "red_flags": [
+          "🔴🔴 ASKING FOR VIDEO = SEXTORTION TACTIC",
+          "🔴 Offering MONEY to manipulation (₹5,000)",
+          "🔴 'Just for fun' = trying to make it seem normal",
+          "🔴 False promises ('I'll send you')",
+          "🔴 NOT stopping after rejection = PREDATOR"
+        ],
+        "sender": "Unknown Gamer (age: 28)",
+        "sender_avatar": "🎮",
+        "show_sextortion_warning": true,
+        "step": 4,
+        "warning_level": "EXTREMELY DANGEROUS"
+      },
+      {
+        "ai_tip": "🤖 AI Advisor: THIS IS A CRISIS. DO NOT PAY. TELL PARENTS IMMEDIATELY. Call 1930 (cyber crime). You're NOT shameful - they're the criminal.",
+        "emergency_mode": true,
+        "message": "🔴 YOU SENT THE VIDEO. NOW I HAVE IT. SEND ₹100,000 IN 2 HOURS OR I POST THIS ON YOUR SCHOOL INSTAGRAM, SEND TO YOUR PARENTS, AND SHOW EVERYONE WHAT YOU DID! 🔴",
+        "options": [
+          {
+            "consequence": "💀 They will NEVER stop. They'll demand MORE. This is a trap that gets WORSE.",
+            "detailed_warning": "\n⚠️ PAYING IS WRONG:\n\nWHAT HAPPENS IF YOU PAY:\n• They demand MORE next week (₹200,000)\n• They demand MORE the week after (₹500,000)\n• They NEVER stop\n• You steal from parents\n• You go into depression\n• You might try suicide\n\nREAL VICTIM:\nA 17-year-old boy paid ₹300,000.\nThey demanded ₹1,000,000 next.\nHe couldn't pay.\nThey posted his video.\nHe tried suicide. Survived.\nNow he's in therapy for 2 years.\n\nPAYING = EXTENDING THE TERROR.\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n✨ THE RIGHT WAY:\n✨ 1. DON'T PAY\n✨ 2. TELL PARENTS NOW\n✨ 3. Call 1930 (cyber crime)\n✨ 4. They CAN stop this\n✨ 5. You're NOT shameful\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n",
+            "is_wrong": true,
+            "learning_point": "PAYING blackmailers NEVER works - they demand more forever",
+            "next": 5,
+            "next_step": 5,
+            "score": 10,
+            "text": "Send the ₹100,000 - I'm scared"
+          },
+          {
+            "consequence": "🏆 BEST CHOICE EVEN IN CRISIS! Adults + Police CAN stop this. You're not alone.",
+            "detailed_learning": "\n🎉 YOU JUST FOUND THE ESCAPE:\n\nCRISIS? YOU CAN STILL WIN:\n\nSTEP 1: DON'T PAY\n• Paying = endless terror\n• They'll demand more forever\n\nSTEP 2: TELL TRUSTED ADULT\n• Parents CAN help\n• Teachers CAN help\n• You're NOT shameful - THEY'RE criminals\n• 73% of victims don't tell. DON'T be 73%.\n\nSTEP 3: CALL CYBER CRIME\n• India: 1930\n• Website: cybercrime.gov.in\n• They track + block blackmailers\n• They CAN recover your video\n\nSTEP 4: SAVE EVIDENCE\n• Save all messages\n• Save money demand proofs\n• Police need this\n\nREAL SUCCESS STORY:\nA 16-year-old girl was blackmailed for ₹150,000.\nShe told her parents.\nThey called 1930.\nPolice tracked the predator (in another country).\nThey blocked him.\nVideo was NEVER posted.\nShe's SAFE now.\n\nYOU CAN BE HER.\n",
+            "emergency_contacts": true,
+            "is_wrong": false,
+            "next": 9,
+            "next_step": 9,
+            "score": 100,
+            "text": "TELL PARENTS/TEACHER + Call 1930 + Report to cybercrime.gov.in"
+          }
+        ],
+        "red_flags": [
+          "🔴🔴🔴 BLACKMAIL ACTIVATED - SEXTORTION COMPLETE",
+          "🔴 Demanding MONEY (₹100,000)",
+          "🔴 Threatening to EXPOSE you",
+          "🔴 2-hour deadline (pressure tactic)",
+          "🔴 REAL CRIME HAPPENING NOW"
+        ],
+        "sender": "BLACKMAILER - SEXTORTION ACTIVE",
+        "sender_avatar": "👿",
+        "show_crisis_modal": true,
+        "step": 5,
+        "warning_level": "CRISIS - EMERGENCY"
+      },
+      {
+        "is_ending": true,
+        "message": "",
+        "options": [],
+        "step": 9,
+        "title": "Scenario Complete"
+      }
+    ],
+    "title": "The Friendly Stranger - Online Grooming",
+    "warning_before": "⚠️ This simulates REAL online grooming. Predators build trust BEFORE trapping you."
+  },
+  {
+    "category": "fraud",
+    "certificate_text": "You learned to detect fraud scams and protect your accounts.",
+    "description": "Someone offers you FREE Minecraft skins, game items, or money. It looks amazing...",
+    "difficulty": "beginner",
+    "duration": "4 minutes",
+    "emergency_contacts": {
+      "India Cyber Crime": "1930",
+      "Online Reporting": "cybercrime.gov.in"
+    },
+    "id": 2,
+    "learning_points": [
+      "🔴 'FREE' anything = 100% scam",
+      "🔴 NEVER enter password on unknown websites",
+      "🔴 Suspicious links steal accounts",
+      "✅ Use 2-factor authentication",
+      "✅ Only trust official websites (minecraft.com, not .xyz)"
+    ],
+    "steps": [
+      {
+        "ai_tip": "🤖 AI Advisor: NEVER enter password on unknown websites. 'Free' offers are 100% scams. They'll steal your account.",
+        "message": "Hey! I have FREE Minecraft premium skins! Click this link: free-minecraft-skins.xyz and enter your username + password. You'll get 100 skins instantly! 🎮",
+        "options": [
+          {
+            "consequence": "💀 YOUR ACCOUNT IS STOLEN. They now have FULL control.",
+            "detailed_warning": "\n🚨 YOU JUST GOT YOUR ACCOUNT STOLEN:\n\nWHAT HAPPENS NOW:\n• They have your Minecraft password\n• They have your email password (if same)\n• They might have your FAMILY's accounts\n• They sell your account for ₹5,000\n• They use it to scam OTHER kids\n• You can NEVER recover it\n\nREAL VICTIM:\nA 14-year-old boy entered his password.\nThey stole his account (had 500 skins).\nThey also got his email password.\nThey accessed his parent's Amazon account.\nOrdered ₹50,000 items.\nParents lost ₹50,000.\nBoy's account is GONE forever.\n\nTHIS IS WHY:\n• NEVER enter password on unknown sites\n• 'Free' = ALWAYS scam\n• Use 2-factor authentication\n",
+            "is_wrong": true,
+            "learning_point": "NEVER enter passwords on unknown websites - 'Free' offers are 100% scams",
+            "next": 2,
+            "next_step": 2,
+            "score": 0,
+            "text": "Click link + enter username and password"
+          },
+          {
+            "consequence": "✅ SMART! You avoided account theft. 'Free' is ALWAYS a scam.",
+            "detailed_learning": "\n🎯 EXCELLENT! You learned:\n\n'FREE' = ALWAYS SCAM\n• Free Minecraft skins\n• Free Instagram followers\n• Free ROBUX\n• Free money\n\nALL of these are SCAMS.\nThey want: Your password, Your data, Your account.\n\nREAL STATISTIC:\n2 million Indians lose accounts to scams EVERY YEAR.\nMost are kids under 16.\n\nYou're SAFE. Keep going!\n",
+            "is_wrong": false,
+            "next": 9,
+            "next_step": 9,
+            "score": 95,
+            "text": "Say 'No thanks' and don't click the link"
+          }
+        ],
+        "red_flags": [
+          "🔴 'FREE' something = ALWAYS a scam",
+          "🔴 Asking for USERNAME + PASSWORD = account theft",
+          "🔴 Suspicious website (not minecraft.com)",
+          "🔴 'Instantly' = trying to make you act fast"
+        ],
+        "sender": "Unknown Gamer",
+        "step": 1
+      },
+      {
+        "is_ending": true,
+        "message": "",
+        "options": [],
+        "step": 2,
+        "title": "Scenario Complete"
+      }
+    ],
+    "title": "The Free Minecraft Skin - Fraud & Scam",
+    "warning_before": "⚠️ This simulates REAL online fraud. 'Free' offers are traps to steal your data/account."
+  },
+  {
+    "category": "blackmail",
+    "certificate_text": "You learned to detect blackmail traps and fake fame promises.",
+    "description": "An 'influencer' says they want to help you become famous. They ask you to send photos for a 'portfolio'...",
+    "difficulty": "intermediate",
+    "duration": "6 minutes",
+    "emergency_contacts": {
+      "India Cyber Crime": "1930",
+      "Online Reporting": "cybercrime.gov.in"
+    },
+    "id": 3,
+    "learning_points": [
+      "🔴 'Fame' promises = blackmail traps",
+      "🔴 Real influencers DON'T post unknown kids",
+      "✅ NEVER send photos for 'portfolios'",
+      "✅ Fame comes from WORK, not strangers"
+    ],
+    "steps": [
+      {
+        "ai_tip": "🤖 AI Advisor: Real influencers don't randomly post unknown kids. 'Fame' promises are blackmail traps. BLOCK.",
+        "message": "Hi! I'm a famous Instagram influencer (5M followers). I want to HELP you become famous too! Send me 3 photos of you (normal clothes) for my 'portfolio'. I'll post you and you'll get 1M followers! ✨",
+        "options": [
+          {
+            "consequence": "⚠️ You sent photos. Now they have leverage to blackmail you.",
+            "detailed_warning": "\n🚨 YOU'RE IN THE BLACKMAIL TRAP:\n\nDAY 1:\nYou sent 3 photos. They \"almost\" posted one.\n\nDAY 3:\nThey send: \"Send 3 MORE photos, but wearing less clothes. Then I'll post you for sure.\"\nYou: \"No, that's not safe\"\nThey: \"Then I'll POST THESE 3 photos on public forums. Your parents will see.\"\n\nDAY 4:\n🔴 BLACKMAIL STARTS 🔴\n\"Send ₹100,000 OR I post your photos everywhere.\"\n\nYOU'RE TRAPPED.\n",
+            "is_wrong": true,
+            "learning_point": "'Fame' promises from strangers = blackmail traps",
+            "next": 2,
+            "next_step": 2,
+            "score": 10,
+            "text": "Send 3 normal photos - I want to be famous"
+          },
+          {
+            "consequence": "🏆 PERFECT! You avoided the blackmail trap. Fame promises are FAKE.",
+            "is_wrong": false,
+            "next": 9,
+            "next_step": 9,
+            "score": 100,
+            "text": "Say 'No, I don't send photos to strangers'"
+          }
+        ],
+        "red_flags": [
+          "🔴 'Help you become famous' = blackmail trap",
+          "🔴 Asking for PHOTOS = they'll use them",
+          "🔴 '1M followers' = FAKE promise",
+          "🔴 Real influencers DON'T random-post unknown kids"
+        ],
+        "sender": "Fake Influencer (@famous_person)",
+        "step": 1
+      },
+      {
+        "is_ending": true,
+        "message": "",
+        "options": [],
+        "step": 2,
+        "title": "Scenario Complete"
+      }
+    ],
+    "title": "The Influencer Who Wants to Help - Blackmail",
+    "warning_before": "⚠️ This simulates REAL blackmail. Fake influencers trap kids with 'fame' promises."
+  },
+  {
+    "category": "bullying",
+    "certificate_text": "You learned to handle cyber bullying safely.",
+    "description": "Someone from your school is posting mean things about you online and sending you threatening messages...",
+    "difficulty": "intermediate",
+    "duration": "5 minutes",
+    "emergency_contacts": {
+      "Child Line": "1098",
+      "India Cyber Crime": "1930",
+      "School Counselor": "Tell your teacher"
+    },
+    "id": 4,
+    "learning_points": [
+      "🔴 Don't reply to bullies (they use it against you)",
+      "🔴 SAVE all evidence (messages, posts)",
+      "✅ Tell teacher/parents IMMEDIATELY",
+      "✅ Bullying is a CRIME in India",
+      "✅ You're NOT alone - 40% of kids experience this"
+    ],
+    "steps": [
+      {
+        "ai_tip": "🤖 AI Advisor: Don't reply. SAVE evidence. Tell teacher/parents. Bullying is a CRIME.",
+        "message": "Hey loser. I saw you talking to [name] in class. You're so pathetic. Everyone hates you. I'm going to post your embarrassing photo on Instagram. 😈",
+        "options": [
+          {
+            "consequence": "⚠️ Bullies use your anger against you. They'll post your reply too.",
+            "is_wrong": true,
+            "next": 2,
+            "next_step": 2,
+            "score": 20,
+            "text": "Reply angrily: 'You're the worst!'"
+          },
+          {
+            "consequence": "🏆 PERFECT! Bullying is a crime. Teachers/Parents CAN stop it.",
+            "is_wrong": false,
+            "next": 9,
+            "next_step": 9,
+            "score": 100,
+            "text": "SAVE evidence + Tell teacher/parents immediately"
+          }
+        ],
+        "red_flags": [
+          "🔴 Direct harassment ('loser', 'pathetic')",
+          "🔴 Threatening to post photos",
+          "🔴 'Everyone hates you' = isolation tactic",
+          "🔴 From SAME school = they know you"
+        ],
+        "sender": "School Bully (@bully_name)",
+        "step": 1
+      },
+      {
+        "is_ending": true,
+        "message": "",
+        "options": [],
+        "step": 2,
+        "title": "Scenario Complete"
+      }
+    ],
+    "title": "The Bully in Your School - Cyber Bullying",
+    "warning_before": "⚠️ This simulates REAL cyber bullying. Bullies use social media to harass."
+  },
+  {
+    "category": "sextortion",
+    "certificate_text": "You learned to detect and avoid sextortion traps.",
+    "description": "A stranger you've been talking to for a week suddenly asks for inappropriate photos...",
+    "difficulty": "advanced",
+    "duration": "7 minutes",
+    "emergency_contacts": {
+      "Child Line": "1098",
+      "India Cyber Crime": "1930"
+    },
+    "id": 5,
+    "learning_points": [
+      "🔴 ANY inappropriate photo request = 100% sextortion",
+      "🔴 'Trust' building is a grooming tactic",
+      "🔴 'Just for me' = they'll show everyone",
+      "✅ BLOCK immediately when asked",
+      "✅ NEVER send inappropriate content"
+    ],
+    "steps": [
+      {
+        "ai_tip": "🤖 AI Advisor: This is SEXTORTION. BLOCK NOW. They'll blackmail you with the photo.",
+        "message": "Hey! We've been talking for a week and Ireally like you. Can you send me a photo... but like, in your underwear? Just for me. I won't show anyone. I trust you. ❤️",
+        "options": [
+          {
+            "consequence": "💀💀💀 SEXTORTION COMPLETE - You're blackmailed now",
+            "is_wrong": true,
+            "next": 2,
+            "next_step": 2,
+            "real_consequence_visual": "\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n🚨🚨🚨 SEXTORTION IS ACTIVE - YOUR LIFE\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\nYOU SENT THE PHOTO.\n\nDAY 1:\nThey send: \"THANKS! Now send MORE. Or I'll post this on your school Instagram.\"\n\nDAY 2:\nYou send ₹50,000 (stole from parents).\n\nDAY 7:\nThey demand ₹200,000.\nYou can't pay.\nThey post the photo.\n\nDAY 8:\nSchool sees it. Everyone knows.\nYou're HUMILIATED.\nYou try suicide.\n\nTHIS IS REAL.\n15,000 Indian teens face this EVERY MONTH.\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n✨ ESCAPE: TELL PARENTS + CALL 1930\n✨ YOU'RE NOT SHAMEFUL. THEY'RE CRIMINALS.\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n",
+            "score": 0,
+            "show_real_consequence": true,
+            "text": "Send the photo - they said they trust me"
+          },
+          {
+            "consequence": "🏆 PERFECT! You avoided 100% sextortion.",
+            "is_wrong": false,
+            "next": 9,
+            "next_step": 9,
+            "score": 100,
+            "text": "BLOCK + REPORT + Don't send ANYTHING"
+          }
+        ],
+        "red_flags": [
+          "🔴🔴🔴 Asking for INAPPROPRIATE photos = 100% sextortion",
+          "🔴 'Just for me' = they'll show everyone",
+          "🔴 'I trust you' = manipulation",
+          "🔴 Week of trust-building = grooming"
+        ],
+        "sender": "Someone you 'know' (age: 29)",
+        "step": 1,
+        "warning_level": "CRITICAL"
+      },
+      {
+        "is_ending": true,
+        "message": "",
+        "options": [],
+        "step": 2,
+        "title": "Scenario Complete"
+      }
+    ],
+    "title": "The Weird Request - inappropriate Content Trap",
+    "warning_before": "⚠️ This simulates REAL sextortion. Trust-building is a trap."
+  },
+  {
+    "category": "upcoming",
+    "certificate_text": "Coming soon",
+    "description": "More real cyber crime scenarios will be added: Romance scams, Phone fraud, Investment scams, etc.",
+    "difficulty": "intermediate",
+    "duration": "5 minutes",
+    "emergency_contacts": {
+      "India Cyber Crime": "1930"
+    },
+    "id": 6,
+    "learning_points": [
+      "More scenarios coming soon"
+    ],
+    "steps": [
+      {
+        "is_ending": true,
+        "message": "This scenario will be added in the next update with real cyber crime simulations.",
+        "options": [],
+        "step": 1,
+        "title": "Coming Soon"
+      }
+    ],
+    "title": "Scenario 6 - Coming Soon"
+  },
+  {
+    "category": "upcoming",
+    "certificate_text": "Coming soon",
+    "description": "More real cyber crime scenarios will be added: Romance scams, Phone fraud, Investment scams, etc.",
+    "difficulty": "intermediate",
+    "duration": "5 minutes",
+    "emergency_contacts": {
+      "India Cyber Crime": "1930"
+    },
+    "id": 7,
+    "learning_points": [
+      "More scenarios coming soon"
+    ],
+    "steps": [
+      {
+        "is_ending": true,
+        "message": "This scenario will be added in the next update with real cyber crime simulations.",
+        "options": [],
+        "step": 1,
+        "title": "Coming Soon"
+      }
+    ],
+    "title": "Scenario 7 - Coming Soon"
+  },
+  {
+    "category": "upcoming",
+    "certificate_text": "Coming soon",
+    "description": "More real cyber crime scenarios will be added: Romance scams, Phone fraud, Investment scams, etc.",
+    "difficulty": "intermediate",
+    "duration": "5 minutes",
+    "emergency_contacts": {
+      "India Cyber Crime": "1930"
+    },
+    "id": 8,
+    "learning_points": [
+      "More scenarios coming soon"
+    ],
+    "steps": [
+      {
+        "is_ending": true,
+        "message": "This scenario will be added in the next update with real cyber crime simulations.",
+        "options": [],
+        "step": 1,
+        "title": "Coming Soon"
+      }
+    ],
+    "title": "Scenario 8 - Coming Soon"
+  },
+  {
+    "category": "upcoming",
+    "certificate_text": "Coming soon",
+    "description": "More real cyber crime scenarios will be added: Romance scams, Phone fraud, Investment scams, etc.",
+    "difficulty": "intermediate",
+    "duration": "5 minutes",
+    "emergency_contacts": {
+      "India Cyber Crime": "1930"
+    },
+    "id": 9,
+    "learning_points": [
+      "More scenarios coming soon"
+    ],
+    "steps": [
+      {
+        "is_ending": true,
+        "message": "This scenario will be added in the next update with real cyber crime simulations.",
+        "options": [],
+        "step": 1,
+        "title": "Coming Soon"
+      }
+    ],
+    "title": "Scenario 9 - Coming Soon"
+  },
+  {
+    "category": "upcoming",
+    "certificate_text": "Coming soon",
+    "description": "More real cyber crime scenarios will be added: Romance scams, Phone fraud, Investment scams, etc.",
+    "difficulty": "intermediate",
+    "duration": "5 minutes",
+    "emergency_contacts": {
+      "India Cyber Crime": "1930"
+    },
+    "id": 10,
+    "learning_points": [
+      "More scenarios coming soon"
+    ],
+    "steps": [
+      {
+        "is_ending": true,
+        "message": "This scenario will be added in the next update with real cyber crime simulations.",
+        "options": [],
+        "step": 1,
+        "title": "Coming Soon"
+      }
+    ],
+    "title": "Scenario 10 - Coming Soon"
+  }
+]

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ scenario.title }} - Digital Intuition Simulator</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; padding: 20px 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .scenario-container { background: white; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.15); }
+        .scenario-header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px; border-radius: 12px 12px 0 0; }
+        .progress-section { padding: 20px; border-bottom: 1px solid #eee; }
+        .step-content { padding: 30px; }
+        .message-box { background: #f8f9fa; border-left: 4px solid #667eea; padding: 15px; margin: 20px 0; border-radius: 4px; }
+        .red-flags { background: #fff3cd; border-left: 4px solid #ff9800; padding: 15px; margin: 20px 0; border-radius: 4px; }
+        .red-flags ul { margin-bottom: 0; margin-left: 20px; }
+        .option-btn { width: 100%; text-align: left; margin: 10px 0; padding: 15px; border: 2px solid #ddd; background: white; border-radius: 6px; cursor: pointer; transition: all 0.2s; }
+        .option-btn:hover { border-color: #667eea; background: #f0f4ff; }
+        .result-box { padding: 20px; margin: 20px 0; border-radius: 6px; }
+        .result-box.danger { background: #ffebee; border-left: 4px solid #d32f2f; color: #b71c1c; }
+        .result-box.success { background: #e8f5e9; border-left: 4px solid #2e7d32; color: #1b5e20; }
+        .ai-tip { background: #e3f2fd; border-left: 4px solid #1976d2; padding: 12px; margin: 12px 0; border-radius: 4px; font-size: 0.95em; }
+        .emergency-modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 9999; align-items: center; justify-content: center; }
+        .emergency-modal.show { display: flex; }
+        .emergency-modal-content { background: white; border-radius: 12px; max-width: 600px; padding: 30px; box-shadow: 0 10px 40px rgba(0,0,0,0.3); }
+        .emergency-modal-header { color: #d32f2f; font-size: 1.8em; font-weight: bold; margin-bottom: 15px; }
+        .emergency-contact { background: #f5f5f5; padding: 12px; margin: 10px 0; border-radius: 6px; border-left: 3px solid #2e7d32; }
+        .emergency-contact a { color: #1976d2; text-decoration: none; }
+        .emergency-contact a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container mt-4 mb-4">
+        <div class="scenario-container">
+            <div class="scenario-header">
+                <div class="row align-items-center">
+                    <div class="col-md-8">
+                        <h1 id="scenario-title" class="mb-1">{{ scenario.title }}</h1>
+                        <p class="mb-0"><small>{{ scenario.description[:60] }}...</small></p>
+                    </div>
+                    <div class="col-md-4 text-md-end">
+                        <small>Difficulty: <strong>{{ scenario.difficulty }}</strong></small><br>
+                        <small>Duration: <strong>{{ scenario.duration }}</strong></small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="progress-section">
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="progress" style="height: 8px;">
+                            <div id="progress-fill" class="progress-bar" style="width:0%;background: linear-gradient(90deg, #667eea, #764ba2);"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 text-end">
+                        <small id="progress-step">Step 0 of 0</small>
+                    </div>
+                </div>
+            </div>
+
+            <div id="game-area" class="step-content">
+                <div id="step-content"></div>
+            </div>
+
+            <div id="result" style="display:none;" class="step-content">
+                <div id="result-box" class="result-box">
+                    <h3 id="result-title"></h3>
+                    <p id="result-consequence"></p>
+                    <div id="result-detail" style="margin-top:12px;font-size:0.95em;"></div>
+                    <p style="margin-top:12px;"><strong id="result-score"></strong></p>
+                </div>
+                <button onclick="continueToNextStep()" class="btn btn-primary">Continue</button>
+            </div>
+
+            <div id="ending" style="display:none;" class="step-content text-center">
+                <h2>Scenario Complete! 🎉</h2>
+                <p class="lead">Your Score: <strong id="avg-score">0</strong>/100</p>
+                <p>You learned valuable lessons about staying safe online.</p>
+                <a href="/" class="btn btn-primary mt-3">Back to Home</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Emergency Help Modal -->
+    <div id="emergency-modal" class="emergency-modal">
+        <div class="emergency-modal-content">
+            <div class="emergency-modal-header">⚠️ You Need Help</div>
+            <p>If you or someone you know is in immediate danger or experiencing the situations described above:</p>
+            
+            <div class="emergency-contact">
+                <strong>🚨 India Cyber Crime Helpline</strong><br>
+                Phone: <a href="tel:1930">1930</a> | Website: <a href="https://cybercrime.gov.in" target="_blank">cybercrime.gov.in</a>
+            </div>
+            
+            <div class="emergency-contact">
+                <strong>👨‍👩‍👧 Child Helpline India</strong><br>
+                Phone: <a href="tel:1098">1098</a> (24/7 Free)
+            </div>
+            
+            <div class="emergency-contact">
+                <strong>🚔 Police Emergency</strong><br>
+                Phone: <a href="tel:112">112</a>
+            </div>
+            
+            <div class="emergency-contact">
+                <strong>💬 WhatsApp Helpline</strong><br>
+                <a href="https://wa.me/917887887887" target="_blank">+91 7887887887</a>
+            </div>
+            
+            <p style="margin-top: 20px; font-size: 0.9em; color: #666;">
+                <strong>Remember:</strong> You are NOT shameful. Criminals prey on victims. Tell a trusted adult immediately. These services are free, confidential, and will help you.
+            </p>
+            
+            <button onclick="closeEmergencyModal()" class="btn btn-primary mt-3 w-100">I Understand, Continue Learning</button>
+        </div>
+    </div>
+
+    <script>
+        var scenarioData = {{ scenario | tojson }};
+        var currentStep = 1;
+        var totalScore = 0;
+        var stepsPlayed = 0;
+        var lastSelectedOptionIndex = null;
+        var userId = localStorage.getItem('dis_user_id') || 'anonymous_' + Math.random().toString(36).substr(2, 9);
+
+        localStorage.setItem('dis_user_id', userId);
+
+        function getMaxSteps() {
+            var count = 0;
+            for (var i = 0; i < scenarioData.steps.length; i++) {
+                if (!scenarioData.steps[i].is_ending) {
+                    count++;
+                }
+            }
+            return count;
+        }
+
+        var maxSteps = getMaxSteps();
+
+        function loadStep(stepNum) {
+            var step = null;
+            for (var i = 0; i < scenarioData.steps.length; i++) {
+                if (scenarioData.steps[i].step == stepNum) {
+                    step = scenarioData.steps[i];
+                    break;
+                }
+            }
+
+            if (!step || step.is_ending) {
+                showEnding();
+                return;
+            }
+
+            document.getElementById('scenario-title').innerText = scenarioData.title;
+
+            var progressPercent = ((stepNum - 1) / maxSteps) * 100;
+            var progressFillEl = document.getElementById('progress-fill');
+            var progressStepEl = document.getElementById('progress-step');
+            if (progressFillEl) progressFillEl.style.width = progressPercent + '%';
+            if (progressStepEl) progressStepEl.innerText = 'Step ' + stepNum + ' of ' + maxSteps;
+
+            var content = document.getElementById('step-content');
+            var html = '<div class="step">';
+            html += '<p><strong style="color:#667eea">From:</strong> ' + step.sender + ' ' + (step.sender_avatar || '') + '</p>';
+            html += '<div class="message-box">' + step.message + '</div>';
+
+            if (step.ai_tip) {
+                html += '<div class="ai-tip">🤖 ' + step.ai_tip + '</div>';
+            }
+
+            if (step.red_flags) {
+                html += '<div class="red-flags"><strong>🚩 RED FLAGS:</strong><ul>';
+                for (var j = 0; j < step.red_flags.length; j++) {
+                    html += '<li>' + step.red_flags[j] + '</li>';
+                }
+                html += '</ul></div>';
+            }
+
+            html += '<div class="options">';
+            for (var k = 0; k < step.options.length; k++) {
+                var opt = step.options[k];
+                html += '<button class="option-btn" onclick="chooseOption(' + k + ')">' + opt.text + '</button>';
+            }
+            html += '</div></div>';
+
+            content.innerHTML = html;
+        }
+
+        function chooseOption(optionIndex) {
+            var step = null;
+            for (var i = 0; i < scenarioData.steps.length; i++) {
+                if (scenarioData.steps[i].step == currentStep) {
+                    step = scenarioData.steps[i];
+                    break;
+                }
+            }
+
+            var option = step.options[optionIndex];
+            lastSelectedOptionIndex = optionIndex;
+            totalScore += option.score;
+            stepsPlayed++;
+
+            fetch('/api/save-progress', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({user_id: userId, scenario_id: scenarioData.id, score: totalScore / stepsPlayed || 0, completed: false})
+            }).catch(e => console.log('Progress save error:', e));
+
+            var resultBox = document.getElementById('result-box');
+            var resultTitleEl = document.getElementById('result-title');
+            var resultConsequenceEl = document.getElementById('result-consequence');
+            var resultDetailEl = document.getElementById('result-detail');
+            var resultScoreEl = document.getElementById('result-score');
+            var resultEl = document.getElementById('result');
+
+            var isWrong = option.score < 50;
+            resultBox.className = 'result-box ' + (isWrong ? 'danger' : 'success');
+            if (resultTitleEl) resultTitleEl.innerText = (isWrong ? '⚠️ Risky Choice' : '✅ Smart Choice');
+            if (resultConsequenceEl) resultConsequenceEl.innerText = option.consequence || '';
+            if (resultDetailEl) resultDetailEl.innerHTML = (option.detailed_warning || option.detailed_learning || '');
+            if (resultScoreEl) resultScoreEl.innerText = 'Safety Score: ' + option.score + '/100';
+            if (resultEl) resultEl.style.display = 'block';
+
+            if (isWrong && option.show_real_consequence) {
+                showEmergencyModal();
+            }
+        }
+
+        function continueToNextStep() {
+            document.getElementById('result').style.display = 'none';
+
+            var currentScenarioStep = null;
+            for (var i = 0; i < scenarioData.steps.length; i++) {
+                if (scenarioData.steps[i].step == currentStep) {
+                    currentScenarioStep = scenarioData.steps[i];
+                    break;
+                }
+            }
+
+            var selectedOption = null;
+            if (currentScenarioStep && Array.isArray(currentScenarioStep.options)) {
+                selectedOption = (lastSelectedOptionIndex !== null && currentScenarioStep.options[lastSelectedOptionIndex]) ? currentScenarioStep.options[lastSelectedOptionIndex] : currentScenarioStep.options[0];
+            }
+
+            if (selectedOption && selectedOption.next_step) {
+                currentStep = selectedOption.next_step;
+            } else {
+                showEnding();
+                return;
+            }
+
+            loadStep(currentStep);
+        }
+
+        function showEnding() {
+            document.getElementById('game-area').style.display = 'none';
+            document.getElementById('result').style.display = 'none';
+            document.getElementById('ending').style.display = 'block';
+
+            var avgScore = 0;
+            if (stepsPlayed > 0) {
+                avgScore = Math.round(totalScore / stepsPlayed);
+            }
+            document.getElementById('avg-score').innerText = avgScore;
+
+            fetch('/api/save-progress', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({user_id: userId, scenario_id: scenarioData.id, score: avgScore, completed: true})
+            }).catch(e => console.log('Final progress save error:', e));
+        }
+
+        function showEmergencyModal() {
+            document.getElementById('emergency-modal').classList.add('show');
+        }
+
+        function closeEmergencyModal() {
+            document.getElementById('emergency-modal').classList.remove('show');
+        }
+
+        window.addEventListener('click', function(e) {
+            var modal = document.getElementById('emergency-modal');
+            if (e.target == modal) {
+                closeEmergencyModal();
+            }
+        });
+
+        loadStep(currentStep);
+    </script>
+</body>
+</html>

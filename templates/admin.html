@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin - Digital Intuition Simulator</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <style>
+    .admin-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:20px; border-bottom:2px solid #ccc; padding-bottom:12px; }
+    .admin-header h1 { margin:0; }
+    .admin-header a { text-decoration:none; color:#007bff; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="admin-header">
+      <h1>Admin - Scenario Editor</h1>
+      <div>
+        <a href="/">Home</a> | <a href="/logout" style="color:#d32f2f">Logout</a>
+      </div>
+    </div>
+    <p><small>Edit scenarios in JSON format below. Changes are saved to the server.</small></p>
+    <textarea id="scenarios-json" style="width:100%;height:400px"></textarea>
+    <div style="margin-top:8px">
+      <button class="btn" id="save-btn">Save Scenarios</button>
+      <span id="save-status" style="margin-left:12px;"></span>
+    </div>
+  </div>
+  <script src="{{ url_for('static', filename='js/admin.js') }}"></script>
+</body>
+</html>

@@ -91,8 +91,7 @@ digital-intuition-simulator/
 │   └── save_scenarios.py           # Export scenarios to JSON
 │
 ├── .github/                        # GitHub Actions CI/CD
-│   └── workflows/
-│       └── test-deploy.yml         # Pipeline for testing & deployment
+│   └── workflows/            
 │
 ├── .venv/                          # Virtual environment (local only)
 ├── __pycache__/                    # Python cache files

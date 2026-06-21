@@ -24,14 +24,16 @@ Protect teenagers from:
 
 ### 1. Clone & Setup
 
-```powershell
-# Clone the repo (if using Git)
+```bash
+# Clone the repo
 git clone https://github.com/yourusername/digital-intuition-simulator.git
 cd digital-intuition-simulator
 
 # Create virtual environment
 python -m venv .venv
-.\.venv\Scripts\Activate.ps1
+# Activate
+.\.venv\Scripts\Activate.ps1   # Windows
+source .venv/bin/activate      # Linux/Mac
 
 # Install dependencies
 pip install -r requirements.txt
@@ -39,7 +41,7 @@ pip install -r requirements.txt
 
 ### 2. Run Locally
 
-```powershell
+```bash
 python app.py
 ```
 
@@ -62,32 +64,40 @@ digital-intuition-simulator/
 ├── app.py                          # Main Flask application
 ├── progress_tracker.py             # User progress & score storage
 ├── requirements.txt                # Python dependencies
-├── Procfile                        # Heroku deployment config
-├── runtime.txt                     # Python version for Heroku
-├── README.md                       # This file
+├── Procfile                        # Deployment config (Heroku/Render)
+├── runtime.txt                     # Python version for deployment
+├── README.md                       # Documentation
+├── .gitignore                      # Git ignore rules
+├── .env.example                    # Example environment variables
 │
-├── templates/
-│   ├── home.html                  # Landing page with scenario list
-│   ├── scenario.html              # Interactive scenario gameplay
-│   ├── login.html                 # Admin login page
-│   └── admin.html                 # Admin scenario editor
+├── templates/                      # HTML templates
+│   ├── home.html                   # Landing page with scenario list
+│   ├── scenario.html               # Interactive scenario gameplay
+│   ├── login.html                  # Admin login page
+│   ├── admin.html                  # Admin scenario editor
+│   └── scenarios.json              # Scenario data storage
 │
-├── static/
+├── static/                         # Static assets
 │   ├── css/
-│   │   └── style.css              # Base styles
-│   └── js/
-│       └── admin.js               # Admin editor functionality
+│   │   └── style.css               # Base styles
+│   ├── js/
+│   │   ├── ai.js                   # AI chat widget logic
+│   │   └── admin.js                # Admin editor functionality
+│   ├── data/                       # Scenario data files
+│   └── assets/                     # Images/icons
 │
-├── .github/
+├── tools/                          # Utility scripts
+│   ├── check_scenario.py           # Test endpoint script
+│   └── save_scenarios.py           # Export scenarios to JSON
+│
+├── .github/                        # GitHub Actions CI/CD
 │   └── workflows/
-│       └── test-deploy.yml        # CI/CD pipeline (GitHub Actions)
+│       └── test-deploy.yml         # Pipeline for testing & deployment
 │
-├── .data/                         # User progress data (created at runtime)
-│   └── progress_*.json
-│
-└── tools/
-    ├── check_scenario.py          # Test endpoint script
-    └── save_scenarios.py           # Export scenarios to JSON
+├── .venv/                          # Virtual environment (local only)
+├── __pycache__/                    # Python cache files
+└── .data/                          # User progress data (runtime)
+    └── progress_*.json
 ```
 
 ---
@@ -118,27 +128,18 @@ digital-intuition-simulator/
 ---
 
 ## 📊 API Endpoints
+## 🔑 Environment / Secrets
 
-### Environment / Secrets
+Create a `.env` file in the project root (copy from `.env.example`) before running locally. Do **NOT** commit `.env`.
 
-Create a `.env` file in the project root (copy from `.env.example`) before running locally. Do NOT commit `.env`.
+Example `.env` variables:
 
-Example `.env` variables (see `.env.example`):
-
-```
+```env
 SECRET_KEY=change_this_to_a_random_secret
 ADMIN_USERNAME=admin
 ADMIN_PASSWORD=admin123
 OPENAI_API_KEY=sk-REPLACE_WITH_YOUR_KEY  # optional, enables richer AI replies
 ```
-
-On Heroku add these as config vars (Dashboard → Settings → Reveal Config Vars) or via CLI:
-
-```powershell
-heroku config:set SECRET_KEY="your-secret" ADMIN_USERNAME="admin" ADMIN_PASSWORD="your-password" OPENAI_API_KEY="sk-..."
-```
-
-
 ### Public Endpoints
 - `GET /` — Home page with scenario list
 - `GET /scenario/<id>` — Play a scenario
@@ -157,139 +158,20 @@ heroku config:set SECRET_KEY="your-secret" ADMIN_USERNAME="admin" ADMIN_PASSWORD
 
 ## 🌐 Deployment
 
-### Option 1: Heroku (Recommended)
-
-**Prerequisites:**
-- [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
-- [Git](https://git-scm.com/)
-- GitHub account
-
-**Steps:**
-
+### Option 1: Render (Recommended, Free)
+- Push code to GitHub.
+- [Go to](render.com)
+- Create New Web Service → connect repo.
+- Build Command:
 ```bash
-# Login to Heroku
-heroku login
-
-# Create app
-heroku create your-app-name
-
-# Set environment variables
-heroku config:set SECRET_KEY=your-secure-random-key
-heroku config:set ADMIN_PASSWORD=your-secure-password
-
-# Deploy
-git push heroku main
-
-# Open app
-heroku open
+pip install -r requirements.txt
 ```
-
-**Enable GitHub Actions deployment** (auto-deploy on `main` branch push):
-1. Go to Heroku dashboard → Account Settings → API Key
-2. Copy your API key
-3. Go to GitHub Repo → Settings → Secrets and variables → Actions
-4. Add secrets:
-   - `HEROKU_API_KEY`
-   - `HEROKU_APP_NAME`
-   - `HEROKU_EMAIL`
-   - `SECRET_KEY`
-
-### Option 2: Google Cloud Run
-
+Start Command:
 ```bash
-# Create container
-gcloud builds submit --tag gcr.io/PROJECT-ID/dis
-
-# Deploy
-gcloud run deploy dis --image gcr.io/PROJECT-ID/dis --platform managed
+python app.py
 ```
-
-### Option 3: Docker (Local/Any Server)
-
-```dockerfile
-FROM python:3.11
-WORKDIR /app
-COPY requirements.txt .
-RUN pip install -r requirements.txt
-COPY . .
-CMD ["gunicorn", "app:app"]
-```
-
-```bash
-docker build -t dis .
-docker run -p 5000:5000 dis
-```
-
----
-
-## 🔧 Configuration
-
-### Environment Variables
-
-```bash
-# Development
-export FLASK_ENV=development
-export SECRET_KEY=dev-key
-
-# Production
-export SECRET_KEY=your-secure-random-key
-export ADMIN_USERNAME=admin
-export ADMIN_PASSWORD=your-password
-```
-
-### Change Admin Credentials
-
-Edit `app.py`, find the login route (~line 47):
-
-```python
-if username == 'admin' and password == 'admin123':  # ← Change these
-```
-
----
-
-## 📈 User Progress Storage
-
-- **Local Storage:** Progress saved to browser localStorage with user ID
-- **Server Storage:** Progress saved to `.data/progress_*.json` files
-- **Migration:** Export `.data/` files for backup/migration to database
-
-### Sample Progress Data
-
-```json
-{
-  "scenarios": {
-    "1": {
-      "score": 85,
-      "completed": true,
-      "timestamp": "2026-06-21T10:30:00"
-    }
-  }
-}
-```
-
----
-
-## 🧪 Testing
-
-### Manual Testing
-
-```bash
-# Test endpoints
-python tools/check_scenario.py
-
-# Verify app imports
-python -c "import app; print('✅ App OK')"
-```
-
-### Automated Tests (CI/CD)
-
-Pushing to `main` branch triggers `.github/workflows/test-deploy.yml`:
-- Installs dependencies
-- Runs basic syntax checks
-- Attempts import test
-- (Optional) Deploy to Heroku
-
----
+Render gives you a live URL:-
+[https://digital-intuition-simulator.onrender.com]
 
 ## 🤝 Contributing
 
@@ -310,8 +192,8 @@ Pushing to `main` branch triggers `.github/workflows/test-deploy.yml`:
 
 | Service | Number | Website |
 |---------|--------|---------|
-| Cyber Crime Helpline | 1930 | cybercrime.gov.in |
-| Child Helpline | 1098 | childlineindia.org |
+| Cyber Crime Helpline | 1930 | [cybercrime.gov.in] |
+| Child Helpline | 1098 | [childlineindia.org] |
 | Police Emergency | 112 | – |
 | WhatsApp Help | +91 7887887887 | WhatsApp |
 
@@ -337,7 +219,7 @@ Built with ❤️ to protect India's youth from cyber crimes.
 
 - **Report bugs:** GitHub Issues
 - **Suggestions:** GitHub Discussions
-- **Contact:** khushipundir@example.com (Replace with actual contact)
+- **Contact:** bhawanapundir123@gmail.com 
 
 **In Crisis?** Don't wait. Call **1930** or **1098** immediately.
 
